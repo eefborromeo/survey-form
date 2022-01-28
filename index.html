@@ -21,30 +21,30 @@
                 <p>We would love to hear from you an know more about your visit.</p>
             </div>
         </div>
-        <form action="">
+        <form action="" id="survey-form">
             <div class="flex-container">
 
                 <div class="container">
                     <div class="form-section">
                         <h2>Patient Details</h2>
                         <div class="form-control">
-                            <label for="first-name-label">First Name</label>
-                            <input type="text" name="" id="first-name-label">
+                            <label for="first-name-label">First Name *</label>
+                            <input type="text" name="" id="first-name-label" required placeholder="Your First Name">
                         </div>
                         <div class="form-control">
-                            <label for="last-name-label">Last Name</label>
-                            <input type="text" name="" id="last-name-label">
+                            <label for="last-name-label">Last Name * </label>
+                            <input type="text" name="" id="last-name-label" required placeholder="Your Last Name">
                         </div>
                     </div>
                     <div class="form-section">
                         <h2>Contact Details</h2>
                         <div class="form-control">
-                            <label for="email-label">Email</label>
-                            <input type="email" name="email" id="email-label">
+                            <label for="email-label">Email *</label>
+                            <input type="email" name="email" id="email-label" required placeholder="youremail@email.com">
                         </div>
                         <div class="form-control">
                             <label for="number-label">Phone Number</label>
-                            <input type="number" name="number" id="number-label">
+                            <input type="number" name="number" id="number-label" placeholder="(0917) 123 4567"> 
                         </div>
         
                     </div>
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div class="button-container">
-                <button type="submit" id="submit">Send your feedback</button>
+                <button type="submit" id="submit">Send your feedback <i class="fas fa-chevron-right"></i></button>
             </div>
         </form>
     </main>
