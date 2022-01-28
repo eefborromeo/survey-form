@@ -1,0 +1,8 @@
+@mixin input-style {
+  display: block;
+  width: 90%;
+  height: 40px;
+  background-color: #fafafa;
+  border: 2px solid $light-gray;
+  border-radius: 5px;
+}

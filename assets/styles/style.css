@@ -1,39 +1,39 @@
-/* GENERAL STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-:root {
-  --very-dark-green: #404040;
-  --dark-green: #48534b;
-  --light-green: #9ea888;
-  --light-gray: #ddd;
-  --white: #fff;
-  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-image: linear-gradient(150deg, #b9c3a8, #666f5b);
+  background-attachment: fixed;
   height: 100%;
   padding: 2rem;
+}
+@media all and (max-width: 768px) {
+  body {
+    padding: 2rem 1rem;
+  }
 }
 
 p {
   font-weight: 500;
   font-size: 16px;
-  color: var(--dark-green);
+  color: #48534b;
 }
 
 main {
   width: 90%;
   margin: auto;
 }
+@media all and (max-width: 768px) {
+  main {
+    width: 95%;
+  }
+}
 
 /* TITLE */
-
 .title-container {
   width: 95%;
   margin: 0 auto 20px;
@@ -42,25 +42,34 @@ main {
 #title {
   color: #404040;
   font-weight: 600;
+  font-size: 2.5rem;
 }
-
 #title i {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
+  font-size: 2rem;
+  margin-right: 0.2rem;
 }
 
 /* FORM */
-
 form {
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 2rem 2rem 1.5rem;
+}
+@media all and (max-width: 768px) {
+  form {
+    padding: 2rem 1rem 1.5rem 1.5rem;
+  }
 }
 
 .flex-container {
   display: flex;
   justify-content: space-between;
+}
+@media all and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 
 .container {
@@ -73,19 +82,21 @@ form {
 .container:nth-child(2) {
   position: relative;
 }
-
-.container:nth-child(2)::before,
-.container:nth-child(2)::after {
-  content: '';
+.container:nth-child(2)::before, .container:nth-child(2)::after {
+  content: "";
   display: block;
   position: absolute;
   left: -40px;
   bottom: 0;
   width: 1.2px;
   height: 90%;
-  background: var(--light-gray);
+  background: #ddd;
 }
-
+@media all and (max-width: 768px) {
+  .container:nth-child(2)::before, .container:nth-child(2)::after {
+    content: none;
+  }
+}
 .container:nth-child(2)::after {
   left: unset;
   right: -20px;
@@ -94,7 +105,7 @@ form {
 .form-section h2 {
   font-size: 20px;
   text-transform: uppercase;
-  color: var(--light-green);
+  color: #9ea888;
   margin-bottom: 17px;
   font-weight: 700;
 }
@@ -102,47 +113,34 @@ form {
 .form-control {
   margin-bottom: 15px;
 }
-
 .form-control label,
 .form-control p {
   font-weight: 500;
   font-size: 16px;
-  color: var(--dark-green);
+  color: #48534b;
+}
+.form-control textarea {
+  height: 100px;
 }
 
 select {
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='black'><polygon points='0,0 100,0 50,50'/></svg>")
-    no-repeat;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='black'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
   background-size: 10px;
   background-position: calc(100% - 10px) 60%;
   -webkit-appearance: none;
   padding-left: 10px;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='number'],
-input[type='tel'],
-select,
-textarea {
+.border {
   display: block;
   width: 90%;
   height: 40px;
   background-color: #fafafa;
-  border: 2px solid var(--light-gray);
+  border: 2px solid #ddd;
   border-radius: 5px;
 }
-
-input[type='text'],
-input[type='email'],
-input[type='number'],
-input[type='tel'],
-textarea {
+.border:not(select) {
   padding: 10px;
-}
-
-textarea {
-  height: 100px;
 }
 
 .button-container {
@@ -151,14 +149,13 @@ textarea {
   display: flex;
   justify-content: flex-end;
 }
-
 .button-container::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
   height: 1.2px;
-  background: var(--light-gray);
+  background: #ddd;
 }
 
 .img-container {
@@ -169,44 +166,28 @@ textarea {
   width: 85%;
   margin: 0 auto;
 }
+@media all and (max-width: 768px) {
+  .doctor-img {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
 
 #submit {
   margin-top: 1.5rem;
-  background-color: var(--light-green);
-  color: var(--white);
+  background-color: #9ea888;
+  color: #fff;
   outline: none;
   border: none;
   padding: 0.8rem 1rem;
   border-radius: 10px;
+}
+#submit:hover {
+  background-color: #48534b;
 }
 
 i.fas.fa-chevron-right {
   margin-left: 15px;
 }
 
-#submit:hover {
-  background-color: var(--dark-green);
-}
-
-/* FORM VALIDATION */
-
-/* MEDIA QUERIES */
-
-@media all and (max-width: 768px) {
-  body {
-    padding: 2rem 1rem;
-  }
-
-  .flex-container {
-    flex-direction: column;
-  }
-
-  form {
-    padding: 2rem 1rem 1.5rem;
-  }
-
-  .container:nth-child(2)::before,
-  .container:nth-child(2)::after {
-    content: none;
-  }
-}
+/*# sourceMappingURL=style.css.map */
