@@ -12,6 +12,7 @@
   --light-green: #9ea888;
   --light-gray: #ddd;
   --white: #fff;
+  height: 100%;
 }
 
 body {
@@ -64,9 +65,6 @@ form {
 
 .container {
   flex-basis: 30%;
-}
-
-.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,7 +95,7 @@ form {
   font-size: 20px;
   text-transform: uppercase;
   color: var(--light-green);
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   font-weight: 700;
 }
 
@@ -114,6 +112,7 @@ form {
 
 input[type='text'],
 input[type='email'],
+input[type='number'],
 input[type='tel'],
 select,
 textarea {
@@ -127,6 +126,7 @@ textarea {
 
 input[type='text'],
 input[type='email'],
+input[type='number'],
 input[type='tel'],
 textarea {
   padding: 10px;
@@ -184,8 +184,16 @@ i.fas.fa-chevron-right {
 /* MEDIA QUERIES */
 
 @media all and (max-width: 768px) {
+  body {
+    padding: 2rem 1rem;
+  }
+
   .flex-container {
     flex-direction: column;
+  }
+
+  form {
+    padding: 2rem 1rem 1.5rem;
   }
 
   .container:nth-child(2)::before,
