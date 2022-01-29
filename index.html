@@ -29,22 +29,34 @@
                         <h2>Patient Details</h2>
                         <div class="form-control">
                             <label for="name" id="name-label">Full Name *</label>
-                            <input class="border" type="text" name="" id="name" required placeholder="Your Full Name">
+                            <input class="border" type="text" name="" id="name" required placeholder="Your Full Name" pattern="[A-Za-z ]{2,}">
+                            <div class="requirements">
+                                Must contain at least 2 characters of uppercase or lowercase letters from A - Z.
+                            </div>
                         </div>
                         <div class="form-control">
                             <label for="number" id="number-label">Age</label>
                             <input class="border" type="number" name="" id="number" min="0" max="100" placeholder="Your Age">
+                            <div class="requirements">
+                                Must be less than or equal to 100.
+                            </div>
                         </div>
                     </div>
                     <div class="form-section">
                         <h2>Contact Details</h2>
                         <div class="form-control">
                             <label for="email" id="email-label">Email *</label>
-                            <input class="border" type="email" name="email" id="email" required placeholder="youremail@email.com" pattern="[a-z0-9._%+-]+@[a-z]{2,4}">
+                            <input class="border" type="email" name="email" id="email" required placeholder="youremail@email.com" pattern="[a-z0-9._%+-]+@[a-z.]{2,}">
+                            <div class="requirements">
+                                Must be a valid email address.
+                            </div>
                         </div>
                         <div class="form-control">
                             <label for="phone">Phone Number</label>
                             <input class="border" type="tel" name="phone" id="phone" placeholder="(0917) 123 4567" pattern="[0-9]{11}"> 
+                            <div class="requirements">
+                                Must be a valid phone number.
+                            </div>
                         </div>
         
                     </div>

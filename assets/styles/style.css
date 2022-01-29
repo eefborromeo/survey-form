@@ -119,6 +119,30 @@ form {
   font-size: 16px;
   color: #48534b;
 }
+.form-control > input[type=text]:invalid:not(focus):not(:placeholder-shown),
+.form-control > input[type=number]:invalid:not(focus):not(:placeholder-shown),
+.form-control > input[type=email]:invalid:not(focus):not(:placeholder-shown),
+.form-control > input[type=tel]:invalid:not(focus):not(:placeholder-shown) {
+  background: pink;
+  border: 2px solid #e22a2a;
+  outline: none;
+}
+.form-control > input[type=text]:invalid:not(focus):not(:placeholder-shown) ~ .requirements,
+.form-control > input[type=number]:invalid:not(focus):not(:placeholder-shown) ~ .requirements,
+.form-control > input[type=email]:invalid:not(focus):not(:placeholder-shown) ~ .requirements,
+.form-control > input[type=tel]:invalid:not(focus):not(:placeholder-shown) ~ .requirements {
+  max-height: 200px;
+  padding: 10px 10px 0;
+}
+.form-control .requirements {
+  font-size: 10px;
+  padding: 10px 10px 0;
+  color: red;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.28s;
+  font-style: italic;
+}
 .form-control textarea {
   height: 100px;
 }

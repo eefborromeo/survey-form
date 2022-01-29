@@ -81,6 +81,30 @@ form {
     font-size: 16px;
     color: $dark-green;
   }
+  > input[type='text'],
+  > input[type='number'],
+  > input[type='email'],
+  > input[type='tel'] {
+    &:invalid:not(focus):not(:placeholder-shown) {
+      background: pink;
+      border: 2px solid #e22a2a;
+      outline: none;
+      & ~ .requirements {
+        max-height: 200px;
+        padding: 10px 10px 0;
+      }
+    }
+  }
+
+  .requirements {
+    font-size: 10px;
+    padding: 10px 10px 0;
+    color: red;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.28s;
+    font-style: italic;
+  }
 
   textarea {
     height: 100px;
