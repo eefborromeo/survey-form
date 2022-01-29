@@ -91,14 +91,14 @@ form {
       outline: none;
       & ~ .requirements {
         max-height: 200px;
-        padding: 10px 10px 0;
+        padding: 10px 5px 0;
       }
     }
   }
 
   .requirements {
     font-size: 10px;
-    padding: 10px 10px 0;
+    padding: 10px 5px 0;
     color: red;
     max-height: 0;
     overflow: hidden;

@@ -132,11 +132,11 @@ form {
 .form-control > input[type=email]:invalid:not(focus):not(:placeholder-shown) ~ .requirements,
 .form-control > input[type=tel]:invalid:not(focus):not(:placeholder-shown) ~ .requirements {
   max-height: 200px;
-  padding: 10px 10px 0;
+  padding: 10px 5px 0;
 }
 .form-control .requirements {
   font-size: 10px;
-  padding: 10px 10px 0;
+  padding: 10px 5px 0;
   color: red;
   max-height: 0;
   overflow: hidden;
